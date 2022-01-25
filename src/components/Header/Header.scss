@@ -6,7 +6,7 @@
 
 	& .container {
 		grid-template-areas:
-    ". nav options .";
+    	". nav options .";
 		grid-template-columns: 1fr 8fr 2fr 1fr;
 		height: 100%;
 	}
