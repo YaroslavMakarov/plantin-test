@@ -1,5 +1,8 @@
 .app {
-  text-align: center;
+
+	&__main-content {
+		grid-area: content;
+	}
 }
 
 .container {
@@ -8,6 +11,9 @@
   margin: 0 auto;
   display: grid;
   gap: 32px;
+	grid-template-areas:
+    ". content .";
+	grid-template-columns: 1fr 10fr 1fr;
 }
 
 @media screen and (max-width: 430px) {

@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 
 import { Blog } from './components/Blog';
+import { BreadCrumbs } from './components/BreadCrumbs';
 import { Header } from './components/Header';
 
 import './App.scss';
@@ -21,17 +22,23 @@ function App() {
 			<div className="app">
 				<Header />
 
-				<Routes>
-					<Route
-						path="/blog"
-						element={<Blog />}
-					/>
+				<main className="container">
+					<div className="app__main-content">
+						<BreadCrumbs />
 
-					<Route
-        		path="*"
-        		element={<Navigate to="/blog" />}
-   			 />
-				</Routes>
+						<Routes>
+							<Route
+								path="/blog"
+								element={<Blog />}
+							/>
+
+							<Route
+								path="*"
+								element={<Navigate to="/blog" />}
+						/>
+						</Routes>
+					</div>
+				</main>
 			</div>
 		</Context.Provider>
   );
