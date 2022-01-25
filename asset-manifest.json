@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/plantin-test/static/css/main.022bfe98.css",
+    "main.js": "/plantin-test/static/js/main.148c7256.js",
+    "static/js/787.d4a599ba.chunk.js": "/plantin-test/static/js/787.d4a599ba.chunk.js",
+    "index.html": "/plantin-test/index.html",
+    "main.022bfe98.css.map": "/plantin-test/static/css/main.022bfe98.css.map",
+    "main.148c7256.js.map": "/plantin-test/static/js/main.148c7256.js.map",
+    "787.d4a599ba.chunk.js.map": "/plantin-test/static/js/787.d4a599ba.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.022bfe98.css",
+    "static/js/main.148c7256.js"
+  ]
+}
