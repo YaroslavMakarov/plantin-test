@@ -1,0 +1,26 @@
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+@media screen and (max-width: 430px) {
+	.header {
+		padding: 20px 16px;
+
+		&__search-menu-container {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			width: 80px;
+		}
+
+		&__mobile-menu {
+			display: flex;
+			align-items: center;
+			padding: 0;
+			background: inherit;
+			border: none;
+		}
+	}
+}
