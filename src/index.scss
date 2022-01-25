@@ -7,3 +7,18 @@ body {
   -moz-osx-font-smoothing: grayscale;
 	background: #E5E5E5;
 }
+
+input,
+button {
+  font: inherit;
+}
+
+button[class] {
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+button:disabled,
+button[disabled] {
+  cursor: not-allowed;
+}
