@@ -13,7 +13,6 @@
 }
 
 .container {
-	width: 100%;
   max-width: 1360px;
   margin: 0 auto;
   display: grid;
@@ -26,5 +25,14 @@
 @media screen and (max-width: 430px) {
 	.container {
 		gap: 25px;
+	}
+}
+
+@media screen and (min-width: 430px) and (max-width: 768px) {
+	.container {
+		grid-template-areas: "content";
+		grid-template-columns: 8fr;
+		gap: 16px;
+		margin: 0 24px;
 	}
 }
