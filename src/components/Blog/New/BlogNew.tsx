@@ -10,8 +10,8 @@ export const BlogNew = () => {
 	const { articles } = articlesData;
 
 	return (
-		<article>
-			<SvgNewArticle />
+		<article className="blog-new">
+			<SvgNewArticle className="blog-new__icon" />
 
 			{articles.map(article => (
 				<BlogNewArticle key={article.id} article={article} />

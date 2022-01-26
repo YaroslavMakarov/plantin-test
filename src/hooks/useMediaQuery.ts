@@ -1,9 +1,11 @@
 import { useMediaQuery } from 'react-responsive';
 
-const MOBILE_RESOLUTION = 430;
+const TABLET_RESOLUTION = 768;
+const MOBILE_L_RESOLUTION = 425;
 
 export const useMedia = () => {
-  const isMobile = useMediaQuery({ maxWidth: MOBILE_RESOLUTION });
+  const isTable = useMediaQuery({ maxWidth: TABLET_RESOLUTION });
+	const isMobileL = useMediaQuery({ maxWidth: MOBILE_L_RESOLUTION });
 
-  return { isMobile };
+  return { isTable, isMobileL };
 };
