@@ -11,3 +11,9 @@
 		color: #91A0B6;
 	}
 }
+
+@media screen and (max-width: 425px) {
+	.bread-crumbs {
+		margin: 16px 0 6px;
+	}
+}

@@ -10,28 +10,28 @@ import { ReactComponent as SvgProfile } from '../../assets/svg/profile.svg';
 
 
 export const Header = () => {
-	const { isMobile } = useMedia();
+	const { isTable } = useMedia();
 
 	return (
 		<header className="header">
 			<div className="container">
-				{isMobile && <SvgHeaderMobileLogo className="header__logo" />}
+				{isTable && <SvgHeaderMobileLogo className="header__logo" />}
 
-				{!isMobile && (
+				{!isTable && (
 					<nav className="header__navigation">
 						<HeaderLinks />
 					</nav>
 				)}
 				
-				{!isMobile && (
+				{!isTable && (
 					<div className="header__options">
 						<SvgSearchDesktop />
 
-						<SvgProfile />
+						<SvgProfile className="header__profile" />
 					</div>
 				)}
 
-				{isMobile && (
+				{isTable && (
 				<div className="header__options">
 					<SvgSearchMobile className="header__mobile-menu" />
 

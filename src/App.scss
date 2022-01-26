@@ -23,12 +23,27 @@
 }
 
 @media screen and (max-width: 430px) {
+	.app {
+		&__main-content {
+			gap: 18px;
+		}
+	}
+	
 	.container {
-		gap: 25px;
+		grid-template-areas: "content";
+		grid-template-columns: 4fr;
+		gap: 32px;
+		margin: 0 16px;
 	}
 }
 
 @media screen and (min-width: 430px) and (max-width: 768px) {
+	.app {
+		&__main-content {
+			gap: 18px;
+		}
+	}
+
 	.container {
 		grid-template-areas: "content";
 		grid-template-columns: 8fr;
