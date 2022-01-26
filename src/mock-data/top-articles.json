@@ -1,0 +1,20 @@
+{
+	"articles": [
+		{
+			"id": 1,
+			"img": "https://s3-alpha-sig.figma.com/img/dfaa/623a/bea72df5a810492614726346b7afe47e?Expires=1644192000&Signature=cKGdgc-nX2Wce191bIZEG8hQFlDTQM0EnFSib3WuEVp4gs~E2IT3Q10FukCO8LmFFwSTI6~6aeIXHEMmfH4MMPtXOVRykDa0aEjjwl2-d0SY6DXRP5yiOKcgdEdePBBtYTN~3kJ1b6JLrCc9a016YYJNY6n-eqnjm4V9j1ooY2S1NIrfP0L0BIo2YJWfZF5Y4jE5Pnd6M6TZDwy3MTaYMjnN1JaNBefughu6aBw8Qr-7CI-vJ9a71S3Z4HcoRCtb8u-W6OqKo2zRktZhkAWoWmsUl2GL7igVNnbClJi~vYGFY2GmRaLOQo3q~jslhWXkxhS0mV-SHhV-IaRxOlUsIA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+			"title": "Professional Repot",
+			"content": "Repotting a plant can seem like a difficult task because a lot of things can go wrong – you can damage Repotting a plant can seem like a difficult task because a lot of things can go wrong – you can damage Repotting a plant can seem like a difficult task because a lot of things can go wrong – you can damage...",
+			"readingTime": 8,
+			"createdAt": "1643199731744"
+		},
+		{
+			"id": 2,
+			"img": "https://s3-alpha-sig.figma.com/img/edac/a6f5/20b5089342c31870a0715fc023b0383b?Expires=1644192000&Signature=fLj2escIEMt0TIsucHs1VZq1ohbT5UzeyfaWB1eqxz~rNsB0vrOBPWAXl18OqZFuNGY1VoQ9o3RVm2KJ4Ux0DBT2jF3KspJTD8tKApui6GoOq2hg4XTvVt2bM7YzUB1k6iIpeDYV060qs3ons9iY55cQY~j8yC19M2OOFAK4eP3tcPP1CV3UZTMlt~gKLxsotqf8BUBZlI3zi5Y1k9HSHoburqW8lriElDzqTPrazcwRMV4MeTAVoTf1I0nYKtq9oU0y5K7dLi2bO24ScWfXyhgTaHzJcyx5NkiOQooIeNvKd3mUTw6Ob1N73-5KdkuqovRVvbgVyf8V8tjWy~-39A__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+			"title": "Professional Repot",
+			"content": "Repotting a plant can seem like a difficult task because a lot of things can go wrong – you can damage Repotting a plant can seem like a difficult task because a lot of things can go wrong – you can damage Repotting a plant can seem like a difficult task because a lot of things can go wrong – you can damage...",
+			"readingTime": 8,
+			"createdAt": "1643199731744"
+		}
+	]
+}
