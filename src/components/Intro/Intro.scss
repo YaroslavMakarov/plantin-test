@@ -1,0 +1,56 @@
+.intro {
+	padding: 56px;
+	position: relative;
+	background: rgba(4, 191, 148, 0.16);
+	border-radius: 16px;
+
+	&__header {
+		font-weight: 800;
+		font-size: 32px;
+		line-height: 48px;
+		color: #04BF94;
+		margin-bottom: 8px;
+	}
+
+	&__temperature {
+		font-weight: bold;
+		font-size: 18px;
+		line-height: 27px;
+		color: #242424;
+		margin-bottom: 16px;
+	}
+
+	&__search-input-wrapper {
+		position: relative;
+		width: fit-content;
+	}
+
+	&__search-input {
+		padding: 16px 56px 16px 16px;
+		background: #FFFFFF;
+		box-shadow: 0px 0.470434px 2.21381px rgba(0, 0, 0, 0.0196802);
+		border-radius: 12px;
+		outline: none;
+		border: none;
+		width: 522px;
+		color: #242424;
+		line-height: 24px;
+
+		&::placeholder {
+			color: #91A0B6;
+		}
+	}
+
+	&__search-input-icon {
+		position: absolute;
+		top: 16px;
+		right: 16px;
+	}
+
+	&__girl-svg {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		z-index: -1;
+	}
+}

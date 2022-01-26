@@ -8,6 +8,7 @@ import {
 import { Blog } from './components/Blog';
 import { BreadCrumbs } from './components/BreadCrumbs';
 import { Header } from './components/Header';
+import { Intro } from './components/Intro';
 
 import './App.scss';
 
@@ -25,6 +26,8 @@ function App() {
 				<main className="container">
 					<div className="app__main-content">
 						<BreadCrumbs />
+
+						<Intro />
 
 						<Routes>
 							<Route
