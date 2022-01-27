@@ -1,0 +1,21 @@
+.blog-item-content {
+	display: grid;
+	gap: 8px;
+
+	&__date {
+		line-height: 24px;
+		color: #ADB8C8;
+	}
+
+	&__header {
+		font-weight: bold;
+		font-size: 24px;
+		line-height: 36px;
+		color: #242424;
+	}
+
+	&__text {
+		line-height: 24px;
+		color: #78787A;
+	}
+}
