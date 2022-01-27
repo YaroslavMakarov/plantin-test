@@ -1,0 +1,39 @@
+.banner {
+	&__logo-svg {
+		margin-bottom: 24px;
+	}
+
+	&__header {
+		font-weight: 600;
+		font-size: 32px;
+		line-height: 48px;
+		color: #04BF94;
+		margin-bottom: 8px;
+	}
+
+	&__text {
+		font-weight: 500;
+		font-size: 24px;
+		line-height: 36px;
+		color: #000000;
+		margin-bottom: 24px;
+	}
+
+	&__button {
+		outline: none;
+		border: none;
+		background: #04BF94;
+		border-radius: 8px;
+		padding: 8px 32px;
+		font-weight: 500;
+		line-height: 24px;
+		color: #FFFFFF
+	}
+
+	&__sally-svg {
+		position: absolute;
+		top: -9px;
+		right: -16px;
+		z-index: -1;
+	}
+}
