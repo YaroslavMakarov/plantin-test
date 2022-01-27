@@ -11,8 +11,11 @@ export const BlogTop: FC<ArticlesProps> = ({ articles }) => {
 		<PostsWrapper label="top of the day">
 			<div className="blog-top">
 				{articles.map(article => (
-					<div className="blog-top__items">
-						<BlogItem article={article} />
+					<div
+						key={article.id}
+						className="blog-top__items"
+					>
+						<BlogItem article={article} variant="top" />
 					</div>
 				))}
 			</div>

@@ -17,5 +17,10 @@
 	&__text {
 		line-height: 24px;
 		color: #78787A;
+		display: -webkit-box;
+		-webkit-line-clamp: 3;
+  	-webkit-box-orient: vertical;
+		text-overflow: ellipsis;
+		overflow: hidden;
 	}
 }

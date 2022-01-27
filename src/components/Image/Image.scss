@@ -1,5 +1,13 @@
 .image {
-	max-width: 100%;
-	object-fit: contain;
+	width: 100%;
+	object-fit: cover;
 	border-radius: 12px;
+
+	&--default {
+		height: 364px;
+	}
+
+	&--small {
+		height: 240px;
+	}
 }

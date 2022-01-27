@@ -1,14 +1,14 @@
 import { FC } from 'react';
 import moment from 'moment';
 
+import './BlogItemContent.scss';
+
 type Props = {
 	title: string,
 	content: string,
 	readingTime: number,
 	createdAt: string,
 };
-
-import './BlogItemContent.scss';
 
 export const BlogItemContent: FC<Props> = (
 	{ title, content, readingTime, createdAt }

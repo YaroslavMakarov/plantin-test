@@ -5,12 +5,19 @@ import { Image } from '../../Image';
 
 import './BlogItem.scss';
 
-export const BlogItem: FC<ArticleProps> = ({ article }) => {
+type Props = ArticleProps & {
+	variant: 'top' | 'interesting'
+}
+
+export const BlogItem: FC<Props> = ({ article, variant }) => {
 	const { img, title, content, readingTime, createdAt } = article;
 
 	return (
 		<article className="blog-item">
-			<Image imgSrc={img} />
+			<Image
+				imgSrc={img}
+				minHeight={ variant === 'top' ? 'default' : 'small'}
+			/>
 
 			<BlogItemContent
 				title={title}
