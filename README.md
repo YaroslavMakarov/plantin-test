@@ -1,5 +1,5 @@
 # React Memo
-- [DEMO LINK](https://yaroslavmakarov.github.io/plantin-test/)
+- [PlantIn](https://yaroslavmakarov.github.io/plantin-test/)
 
 Technologies:
 * HTML5
