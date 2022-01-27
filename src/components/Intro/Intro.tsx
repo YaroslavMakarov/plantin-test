@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 
+import { Paper } from '../Paper';
+
 import './Intro.scss';
 
 import { fetchTemperatureByLocation } from '../../api/weather';
@@ -23,7 +25,7 @@ export const Intro = () => {
 	}, []);
 
 	return (
-		<section className="intro">
+		<Paper>
 			<h1 className="intro__header">
 				Stay always tuned with planting trends
 			</h1>
@@ -53,6 +55,6 @@ export const Intro = () => {
 			</div>
 
 			{!isTable && <SvgGirl className="intro__girl-svg" />}
-		</section>
+		</Paper>
 	);
 };

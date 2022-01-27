@@ -1,9 +1,4 @@
 .intro {
-	padding: 56px;
-	position: relative;
-	background: rgba(4, 191, 148, 0.16);
-	border-radius: 16px;
-
 	&__header {
 		font-weight: 800;
 		font-size: 32px;
@@ -67,8 +62,6 @@
 
 @media screen and (max-width: 768px) {
 	.intro {
-		padding: 16px;
-
 		&__header {
 			font-size: 24px;
 			line-height: 36px;
