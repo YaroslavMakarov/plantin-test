@@ -1,0 +1,17 @@
+.posts-wrapper {
+	display: grid;
+	gap: 16px;
+
+	&__line {
+		background: #C4C4C4;
+		height: 1px;
+	}
+
+	&__label {
+		font-weight: bold;
+		font-size: 14px;
+		line-height: 24px;
+		text-transform: uppercase;
+		color: #91A0B6;
+	}
+}
