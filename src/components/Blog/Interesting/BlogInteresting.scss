@@ -1,0 +1,8 @@
+.blog-interesting {
+	display: flex;
+	gap: 56px 32px;
+
+	&__items {
+		display: 0 1 33%;
+	}
+}

@@ -13,6 +13,7 @@ import './BlogItemContent.scss';
 export const BlogItemContent: FC<Props> = (
 	{ title, content, readingTime, createdAt }
 ) => {
+	
 	return (
 		<div className="blog-item-content">
 			<div className="blog-item-content__date">
