@@ -1,4 +1,10 @@
-import { useEffect, useState } from 'react';
+import {
+	useEffect,
+	useState,
+	useContext,
+	useCallback
+} from 'react';
+import debounce from 'lodash.debounce';
 
 import { Paper } from '../Paper';
 
@@ -8,12 +14,25 @@ import { fetchTemperatureByLocation } from '../../api/weather';
 
 import { useMedia } from '../../hooks/useMediaQuery';
 
+import { Context } from '../../Context';
+import { CHANGE_INPUT_VALUE } from '../../Context/reducer';
+
 import { ReactComponent as SvgIntroSearch } from '../../assets/svg/intro-search.svg';
 import { ReactComponent as SvgGirl } from '../../assets/svg/girl.svg';
 
 export const Intro = () => {
 	const [temperature, setTemperature] = useState<number>(0);
+	const [value, setValue] = useState('');
 	const { isTable } = useMedia();
+	const { state, dispatch } = useContext(Context);
+
+	const debounceInputValue = useCallback(
+			debounce(
+				inputValue => dispatch({ type: CHANGE_INPUT_VALUE, inputValue }),
+				300,
+			),
+    [],
+  );
 	
 	useEffect(() => {
 		fetchTemperatureByLocation(703448, '5fe7d5a50540714068f029f1eaf1ffe4')
@@ -49,6 +68,11 @@ export const Intro = () => {
 					className="intro__search-input"
 					type="text"
 					placeholder="Search"
+					value={value}
+					onChange={({ target}) => {
+						setValue(target.value);
+						debounceInputValue(target.value);
+					}}
 				/>
 
 				<SvgIntroSearch className="intro__search-input-icon" />

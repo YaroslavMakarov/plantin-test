@@ -1,4 +1,4 @@
-const CHANGE_INPUT_VALUE = 'CHANGE_INPUT_VALUE';
+export const CHANGE_INPUT_VALUE = 'CHANGE_INPUT_VALUE';
 
 export type ChangeInputValue = {
 	type: typeof CHANGE_INPUT_VALUE,
