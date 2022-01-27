@@ -1,15 +1,27 @@
 {
   "files": {
-    "main.css": "/plantin-test/static/css/main.022bfe98.css",
-    "main.js": "/plantin-test/static/js/main.148c7256.js",
+    "main.css": "/plantin-test/static/css/main.d9d20179.css",
+    "main.js": "/plantin-test/static/js/main.c18daa6f.js",
     "static/js/787.d4a599ba.chunk.js": "/plantin-test/static/js/787.d4a599ba.chunk.js",
+    "static/media/sally.svg": "/plantin-test/static/media/sally.2668d4c04dbfffd5ea3f109ff193a4af.svg",
+    "static/media/girl.svg": "/plantin-test/static/media/girl.77831221ed07caaa43da1ba592b25d5c.svg",
+    "static/media/lazy-loading.svg": "/plantin-test/static/media/lazy-loading.8aa8bcc4291452c69fd338e3fb2175d9.svg",
+    "static/media/header-logo-mobile.svg": "/plantin-test/static/media/header-logo-mobile.5d99c8a01d4d5fa2d55a89eb70d56753.svg",
+    "static/media/new-article.svg": "/plantin-test/static/media/new-article.c82f81af78c820acde9b4a551cc9c1a0.svg",
+    "static/media/profile.svg": "/plantin-test/static/media/profile.1ede28b5846a14689aee0d930700cd34.svg",
     "index.html": "/plantin-test/index.html",
-    "main.022bfe98.css.map": "/plantin-test/static/css/main.022bfe98.css.map",
-    "main.148c7256.js.map": "/plantin-test/static/js/main.148c7256.js.map",
+    "static/media/intro-search.svg": "/plantin-test/static/media/intro-search.4e980fff842d5b206767cbedec94700a.svg",
+    "static/media/menu.svg": "/plantin-test/static/media/menu.32a4a73131a0a1381ddee6d57455973b.svg",
+    "static/media/header-search-mobile.svg": "/plantin-test/static/media/header-search-mobile.b1df8cd01526630edcf9b065470500ac.svg",
+    "static/media/header-search-desktop.svg": "/plantin-test/static/media/header-search-desktop.ebbe1d1fd00829ebb1583b9c2c694b72.svg",
+    "static/media/chevron-left.svg": "/plantin-test/static/media/chevron-left.8fc57349f20c6194118967f3ae466c1f.svg",
+    "static/media/chevron-right.svg": "/plantin-test/static/media/chevron-right.32af742853e1035d482fa5f3a64f15ee.svg",
+    "main.d9d20179.css.map": "/plantin-test/static/css/main.d9d20179.css.map",
+    "main.c18daa6f.js.map": "/plantin-test/static/js/main.c18daa6f.js.map",
     "787.d4a599ba.chunk.js.map": "/plantin-test/static/js/787.d4a599ba.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.022bfe98.css",
-    "static/js/main.148c7256.js"
+    "static/css/main.d9d20179.css",
+    "static/js/main.c18daa6f.js"
   ]
 }
