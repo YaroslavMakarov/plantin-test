@@ -9,15 +9,19 @@ import './BlogInteresting.scss';
 
 import { Context } from '../../../Context';
 
+import { useMedia } from '../../../hooks/useMediaQuery';
+
 export const BlogInteresting: FC<ArticlesProps> = ({ articles }) => {
 	const { state } = useContext(Context);
 	const { searchValue } = state;
+	const { isTablet } = useMedia();
 
 	return (
 		<PostsWrapper label="interesting">
 			<div className="blog-interesting">
 				{articles.map((article, index) => {
-					if (index === 3 && !searchValue) {
+					const indexForBanner = isTablet ? 4 : 3;
+					if (index === indexForBanner && !searchValue) {
 						return (
 							<Fragment key={article.id}>
 								<div className="blog-interesting__banner">

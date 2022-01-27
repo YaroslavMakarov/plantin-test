@@ -2,3 +2,9 @@
 	display: grid;
 	gap: 56px;
 }
+
+@media screen and (max-width: 768px) {
+	.blog {
+		gap: 36px;
+	}
+}

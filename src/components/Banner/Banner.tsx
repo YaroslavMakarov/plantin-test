@@ -8,7 +8,7 @@ import { ReactComponent as SvgSally } from '../../assets/svg/sally.svg';
 import { ReactComponent as SvgLogo } from '../../assets/svg/header-logo-mobile.svg';
 
 export const Banner = () => {
-	const { isTable } = useMedia();
+	const { isTablet } = useMedia();
 
 	return (
 		<Paper variant="banner">
@@ -30,7 +30,7 @@ export const Banner = () => {
 				Try For Free
 			</button>
 
-			{!isTable && <SvgSally className="banner__sally-svg" />}
+			{!isTablet && <SvgSally className="banner__sally-svg" />}
 		</Paper>
 	);
 };

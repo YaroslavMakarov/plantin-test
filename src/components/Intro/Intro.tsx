@@ -23,7 +23,7 @@ import { ReactComponent as SvgGirl } from '../../assets/svg/girl.svg';
 export const Intro = () => {
 	const [temperature, setTemperature] = useState<number>(0);
 	const [value, setValue] = useState('');
-	const { isTable } = useMedia();
+	const { isTablet } = useMedia();
 	const { state, dispatch } = useContext(Context);
 
 	const debounceInputValue = useCallback(
@@ -49,13 +49,13 @@ export const Intro = () => {
 				Stay always tuned with planting trends
 			</h1>
 
-			{!isTable && (
+			{!isTablet && (
 				<div className="intro__temperature">
 					{`Current temperature is: ${temperature}°C`}
 				</div>
 			)}
 
-			{isTable && (
+			{isTablet && (
 				<div className="intro__text">
 					<span className="intro__text--bold">Tips &amp; Tricks</span>{' '}
 					selected specially for{' '}
@@ -78,7 +78,7 @@ export const Intro = () => {
 				<SvgIntroSearch className="intro__search-input-icon" />
 			</div>
 
-			{!isTable && <SvgGirl className="intro__girl-svg" />}
+			{!isTablet && <SvgGirl className="intro__girl-svg" />}
 		</Paper>
 	);
 };

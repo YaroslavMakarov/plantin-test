@@ -11,11 +11,13 @@ import { Context } from '../../Context';
 
 import { customDelay } from '../../utility/customDelay';
 
+import { useMedia } from '../../hooks/useMediaQuery';
+
 import topArticles from '../../mock-data/top-articles.json';
 import interestingArticles from '../../mock-data/interesting-articles.json';
 import articlesData from '../../mock-data/news-articles.json';
 
-let LAST_INTERESTING_ARTICLE_INDEX = 3;
+let LAST_INTERESTING_ARTICLE_INDEX: number;
 
 export const Blog = () => {
 	const { articles: topTopArticles } = topArticles;
@@ -31,6 +33,7 @@ export const Blog = () => {
 	const blogRef = useRef<HTMLDivElement>(null);
 	const [isLazyLoading, setIsLazyLoading] = useState<boolean>(false);
 	const [loading, setLoading] = useState<boolean>(false);
+	const { isTablet } = useMedia();
 
 	const filteredArticles = (articles: Article[]): Article[] => {
 	
@@ -59,7 +62,7 @@ export const Blog = () => {
 				filteredArticles(topInterestingArticles)
 			);
 		} else {
-			LAST_INTERESTING_ARTICLE_INDEX = 3;
+			LAST_INTERESTING_ARTICLE_INDEX = isTablet ? 4 : 3;
 			setFilteredTopArticles(topTopArticles);
 			setFilteredNewArticles(newArticles);
 			setFilteredInterestingArticles(spliceArr(topInterestingArticles));

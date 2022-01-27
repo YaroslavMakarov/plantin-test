@@ -1,5 +1,6 @@
 .blog-interesting {
 	display: flex;
+	justify-content: space-between;
 	gap: 56px 32px;
 	flex-wrap: wrap;
 
@@ -9,5 +10,31 @@
 
 	&__banner {
 		width: 100%;
+	}
+}
+
+@media screen and (max-width: 1165px) {
+	.blog-interesting {
+		&__items {
+			flex: 0 1 30%;
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.blog-interesting {
+		justify-content: space-around;
+		&__items {
+			flex: 0 1 45%;
+		}
+	}
+}
+
+@media screen and (max-width: 620px) {
+	.blog-interesting {
+		flex-direction: column;
+		justify-content: unset;
+		flex-wrap: unset;
+		gap: 24px;
 	}
 }
