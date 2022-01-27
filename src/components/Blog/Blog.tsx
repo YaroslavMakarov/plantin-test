@@ -1,17 +1,21 @@
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useEffect, useState, useRef } from 'react';
 
-import { Banner } from '../Banner';
 import { BlogNew } from './New';
 import { BlogTop } from './Top';
 import { BlogInteresting } from './Interesting';
+import { LazyLoading } from '../LazyLoading';
 
 import './Blog.scss';
 
 import { Context } from '../../Context';
 
+import { customDelay } from '../../utility/customDelay';
+
 import topArticles from '../../mock-data/top-articles.json';
 import interestingArticles from '../../mock-data/interesting-articles.json';
 import articlesData from '../../mock-data/news-articles.json';
+
+let LAST_INTERESTING_ARTICLE_INDEX = 3;
 
 export const Blog = () => {
 	const { articles: topTopArticles } = topArticles;
@@ -24,6 +28,9 @@ export const Blog = () => {
 	const [articlesCount, setArticlesCount] = useState<number>(0);
 	const { state } = useContext(Context);
 	const { searchValue } = state;
+	const blogRef = useRef<HTMLDivElement>(null);
+	const [isLazyLoading, setIsLazyLoading] = useState<boolean>(false);
+	const [loading, setLoading] = useState<boolean>(false);
 
 	const filteredArticles = (articles: Article[]): Article[] => {
 	
@@ -35,6 +42,11 @@ export const Blog = () => {
 		})
 	};
 
+	const spliceArr = (arr: Article[]): Article[] => {
+		return arr.slice(0, LAST_INTERESTING_ARTICLE_INDEX);
+	};
+	
+	// filtering articles regarding search input
 	useEffect(() => {
 		if (searchValue) {
 			setFilteredTopArticles(
@@ -47,11 +59,12 @@ export const Blog = () => {
 				filteredArticles(topInterestingArticles)
 			);
 		} else {
+			LAST_INTERESTING_ARTICLE_INDEX = 3;
 			setFilteredTopArticles(topTopArticles);
 			setFilteredNewArticles(newArticles);
-			setFilteredInterestingArticles(topInterestingArticles);
+			setFilteredInterestingArticles(spliceArr(topInterestingArticles));
 		}
-
+		LAST_INTERESTING_ARTICLE_INDEX = 6;
 	}, [searchValue]);
 
 	useEffect(() => {
@@ -63,7 +76,44 @@ export const Blog = () => {
 		},
 		[filteredTopArticles, filteredNewArticles, filteredInterestingArticles]
 	);
+	
+	// adding observer for lazy loading
+	useEffect(() => {
+    if (loading) {
+      const observer = new IntersectionObserver(
+        entries => {
+          if (entries[0].isIntersecting) {
+            setIsLazyLoading(true);
+						setLoading(false);
+          }
+        },
+        { rootMargin: '100px' },
+      );
+      if (blogRef.current) {
+        observer.observe(blogRef.current);
+      }
+    }
+  }, [loading]);
 
+	// adding new items after triggering intersection observer
+	useEffect(() => {
+		if (isLazyLoading && !searchValue) {
+			customDelay(3000).then(() => {
+				setIsLazyLoading(false);
+				setFilteredInterestingArticles(spliceArr(topInterestingArticles));
+				LAST_INTERESTING_ARTICLE_INDEX += 3;
+				setLoading(true);
+			});
+		}
+	}, [isLazyLoading, searchValue]);
+
+	// custom delay to appear div for lazy loading
+	useEffect(() => {
+		customDelay(3000).then(() => {
+			setLoading(true);
+		})
+	}, [searchValue]);
+	
 	return (
 		<>
 			{articlesCount ? (
@@ -80,11 +130,17 @@ export const Blog = () => {
 						<BlogInteresting articles={filteredInterestingArticles} />
 					)}
 
-					<Banner />
+					{isLazyLoading 
+						&& !searchValue 
+						&& filteredInterestingArticles.length < topInterestingArticles.length && (
+						<LazyLoading />
+					)}
 				</div>
 			) : (
 				<div>NO ARTICLES</div>
 			)}
+
+			{loading && <div ref={blogRef} />}
 		</>
 	);
 };
