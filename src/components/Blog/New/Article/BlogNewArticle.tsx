@@ -5,18 +5,7 @@ import { Image } from '../../../Image';
 
 import './BlogNewArticle.scss';
 
-type Props = {
-	article: {
-		id: number,
-		img: string,
-		title: string,
-		content: string,
-		readingTime: number,
-		createdAt: string,
-	}
-}
-
-export const BlogNewArticle: FC<Props> = ({ article }) => {
+export const BlogNewArticle: FC<ArticleProps> = ({ article }) => {
 	
 	return (
 		<div className="blog-new-article">
