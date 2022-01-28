@@ -1,4 +1,4 @@
-# React Memo
+# PlantIn test
 - [PlantIn](https://yaroslavmakarov.github.io/plantin-test/)
 
 Technologies:
